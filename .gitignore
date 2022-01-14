@@ -15,3 +15,6 @@ Gemfile.lock
 
 # Ignore Rubymine files
 .idea
+
+# Ignore .ruby-version file to allow devs to use whichever compatible version they want
+.ruby-version

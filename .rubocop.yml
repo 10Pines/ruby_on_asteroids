@@ -7,6 +7,11 @@ AllCops:
   TargetRubyVersion: 2.4
   NewCops: enable
 
+# I don't like the approach of forcing the first describe block to point to a class. In some cases specs are more
+# flexible if they describe an abstract behavior rather than a specific class
+RSpec/DescribeClass:
+  Enabled: false
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
