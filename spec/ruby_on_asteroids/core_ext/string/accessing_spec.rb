@@ -3,7 +3,7 @@
 require "ruby_on_asteroids/core_ext/string/accessing"
 
 RSpec.describe "String extensions to improve the way we access to the string contents" do
-  String.include RubyOnAsteroids::CoreExt::String::Accessing
+  RubyOnAsteroids.enhance_strings
 
   describe "#but_last" do
     describe "without passing a number of characters to be removed" do

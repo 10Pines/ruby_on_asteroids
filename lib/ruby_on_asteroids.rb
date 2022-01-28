@@ -2,7 +2,16 @@
 
 require_relative "ruby_on_asteroids/version"
 
+# I'm the root module of the gem. I provide useful methods to enable enhancements
 module RubyOnAsteroids
   class Error < StandardError; end
-  # Your code goes here...
+
+  # Apply patches to the String class to enhance it by adding new methods
+  def enhance_strings
+    require "ruby_on_asteroids/core_ext/string/accessing"
+
+    String.include RubyOnAsteroids::CoreExt::String::Accessing
+  end
+
+  module_function :enhance_strings
 end

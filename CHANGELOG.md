@@ -1,5 +1,6 @@
-## [Unreleased]
+### 0.1.0 / 2022-01-28
 
-## [0.1.0] - 2022-01-14
+Initial release of the gem
 
-- Initial release
+Features
+* Enhance `String` objects by adding `but_last` method

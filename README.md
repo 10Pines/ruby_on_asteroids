@@ -1,7 +1,5 @@
 # RubyOnAsteroids
 
-**Note: This gem is a work in progress**
-
 A gem with useful tools to expand Ruby language and make it more powerful
 
 ## Installation
@@ -20,15 +18,42 @@ Or install it yourself as:
 
     $ gem install ruby_on_asteroids
 
+## Available enhancements
+
+### String
+
+- [`but_last`](lib/ruby_on_asteroids/core_ext/string/accessing.rb): Return a copy of the string without the 
+last # of characters requested.
+
 ## Usage
 
-TODO: Write usage instructions here
+The gem is designed to provide only the enhancements you ask for, that means by default we won't auto-load classes 
+that are not needed, nor apply enhancements you didn't ask for.
+
+To enable enhancements you need to first load the gem:
+
+``` ruby
+require "ruby_on_asteroids"
+```
+
+and then enable the enhancements you want
+
+``` ruby
+RubyOnAsteroids.enhance_strings
+```
+
+**Tip:** If you use `pry` gem as a Ruby REPL you can enable the enhancements in your 
+[`.pryrc`](https://github.com/pry/pry#overview) file in your home directory to benefit from the enhancements during
+your REPL sessions even if the gem is not installed in your project. 
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. 
+You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the 
+version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, 
+push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
