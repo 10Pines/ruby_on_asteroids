@@ -14,6 +14,7 @@ Metrics/BlockLength:
     - 'Rakefile'
     - '**/*.rake'
     - 'spec/**/*.rb'
+    - '*.gemspec'
 
 # I don't like the approach of forcing the first describe block to point to a class. In some cases specs are more
 # flexible if they describe an abstract behavior rather than a specific class
