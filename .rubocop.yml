@@ -7,10 +7,22 @@ AllCops:
   TargetRubyVersion: 2.4
   NewCops: enable
 
+# Exclude files that contain purely declarative DSLs
+# see https://stackoverflow.com/a/41187163 for more details
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
 # I don't like the approach of forcing the first describe block to point to a class. In some cases specs are more
 # flexible if they describe an abstract behavior rather than a specific class
 RSpec/DescribeClass:
   Enabled: false
+
+# I like the idea of restricting the amount of nested groups, but 3 seems too low
+RSpec/NestedGroups:
+  Max: 5
 
 Style/StringLiterals:
   Enabled: true
