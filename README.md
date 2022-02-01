@@ -25,6 +25,15 @@ Or install it yourself as:
 - [`but_last`](lib/ruby_on_asteroids/core_ext/string/accessing.rb): Return a copy of the string without the 
 last # of characters requested.
 
+**Note:** All `String` enhancements can be enabled by calling `RubyOnAsteroids.enhance_strings`
+
+### Array
+
+- [`but_last`](lib/ruby_on_asteroids/core_ext/array/accessing.rb): Return a copy of the array without the
+  last # of elements requested.
+
+**Note:** All `Array` enhancements can be enabled by calling `RubyOnAsteroids.enhance_arrays`
+
 ## Usage
 
 The gem is designed to provide only the enhancements you ask for, that means by default we won't auto-load classes 

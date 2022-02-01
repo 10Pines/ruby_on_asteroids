@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "ruby_on_asteroids/core_ext/string/accessing"
-
 RSpec.describe "String extensions to improve the way we access to the string contents" do
   RubyOnAsteroids.enhance_strings
 

@@ -12,6 +12,13 @@ module RubyOnAsteroids
 
     String.include RubyOnAsteroids::CoreExt::String::Accessing
   end
-
   module_function :enhance_strings
+
+  # Apply patches to the Array class to enhance it by adding new methods
+  def enhance_arrays
+    require "ruby_on_asteroids/core_ext/array/accessing"
+
+    Array.include RubyOnAsteroids::CoreExt::Array::Accessing
+  end
+  module_function :enhance_arrays
 end
