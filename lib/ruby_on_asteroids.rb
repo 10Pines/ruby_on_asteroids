@@ -21,4 +21,11 @@ module RubyOnAsteroids
     Array.include RubyOnAsteroids::CoreExt::Array::Accessing
   end
   module_function :enhance_arrays
+
+  # Apply all the available patches to enhance classes buy adding new methods to them
+  def enable_all_enhancements
+    enhance_strings
+    enhance_arrays
+  end
+  module_function :enable_all_enhancements
 end

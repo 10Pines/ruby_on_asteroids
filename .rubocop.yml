@@ -21,6 +21,11 @@ Metrics/BlockLength:
 RSpec/DescribeClass:
   Enabled: false
 
+# I don't agree with the approach of having only one assert per test, in some cases you need to perform more than
+# one verification to ensure the whole functionality works as intended
+RSpec/MultipleExpectations:
+  Enabled: false
+
 # I like the idea of restricting the amount of nested groups, but 3 seems too low
 RSpec/NestedGroups:
   Max: 5
